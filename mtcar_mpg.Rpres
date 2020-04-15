@@ -1,0 +1,39 @@
+MPG Predector
+========================================================
+author: Shady
+date: 04-13-2020
+autosize: true
+
+Overview
+========================================================
+
+This presentation and the application was build for the course Developing Data Products as part of the Coursera Data Science Specializaion.
+
+The Shiny app developed for this assignment is available at:
+https://shadynabil.shinyapps.io/mtcar_mpg/
+
+The source codes of ui.R and server.R are available on the GitHub repo:
+
+
+Idea
+====
+
+The idea of this application is to let users be able to predict their vehicles' MPG by entering specs such as transmission type, weight, horse power, and number of cylinders.
+
+Dataset
+========================================================
+
+For this application, we used the mtcars dataset from datasets library
+The summary of the dataset is below:
+```{r}
+summary(mtcars)
+```
+
+Model
+========================================================
+
+We used lm to fit a multivariable regression; mpg as outcome, am, cyl, hp, and wt as predictors. The coefficients is shown below,
+
+```{r}
+lm(mpg ~ am + cyl + hp + wt, data = mtcars)
+```
